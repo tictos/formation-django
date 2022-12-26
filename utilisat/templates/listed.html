@@ -1,0 +1,17 @@
+<h3> Listes de Diffusion </h3>
+
+<ul>
+    {% for liste in listed %}
+    <p>
+       <a href=" {{liste.id}} ">Nom de la liste: {{liste.listeName}}</a> 
+    </p>
+    
+    <ul>
+        <li>
+            {{liste.user}}
+        </li>
+    </ul>
+
+    {% endfor %}
+    
+</ul>

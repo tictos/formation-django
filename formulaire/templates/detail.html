@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block title %}Contacts{% endblock title %}
+
+{% block header %}
+{% if message %}
+    {% for message in messages %}
+        <h3> {{message}} </h3>
+    {% endfor %}
+{% endif %}
+{% endblock header %}
+
+
+
+{% block content %}
+    <ul>
+        <li>Nom: {{pers.name}} </li>
+        <li>Email: {{pers.email}} </li>
+        <li>Message: {{pers.message}} </li>
+    </ul>
+{% endblock content %}

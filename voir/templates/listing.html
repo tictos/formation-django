@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+
+   {% block title %}<h1>les Tâches</h1>{% endblock  %} 
+
+    <ul>
+        {% for task in tasks %}
+        <li>
+            <h3>
+                {% if task.closed %}
+                    <span style="color: red;"> {{task.name}} </span>
+
+
+                {% else %}
+                    {{task.name}}                
+                
+                {% endif %}
+            </h3>
+
+            <h4> {{task.description}} </h4>
+
+            <p>Date de rendu: {{task.due_date}} </p>
+
+            <p>Date de Début: {{task.scheldule_date}} </p>
+
+        </li>
+        {% endfor %}
+    </ul>
+
+{% endblock  %}

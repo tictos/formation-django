@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+<!--{{ contact_form.as_p }}-->
+{% load crispy_forms_tags %}
+{% block title %}Nouveau Contact{% endblock title %}
+{% block content %}
+<form action="/contact/" method="post">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <button type="submit">Savegarder</button>
+</form>
+{% endblock content %}
+
